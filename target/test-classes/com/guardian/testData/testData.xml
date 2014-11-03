@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<loginTestData>
+	<validUser>
+			<username>laxmikants</username>
+			<email>laxmi.somni@gmail.com</email>
+			<password>Password1</password>
+	</validUser>
+
+	<invalidUser>
+			<username>none</username>
+			<email>invalidUser@invalid.co.uk</email>
+			<password>invalidPassword</password>
+	</invalidUser>
+</loginTestData>
