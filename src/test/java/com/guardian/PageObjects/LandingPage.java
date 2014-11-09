@@ -1,3 +1,4 @@
+//Author: Laxmi Somni
 package com.guardian.PageObjects;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -16,10 +17,9 @@ import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LandingPage extends AbstractPage {
+public class LandingPage extends Abstractpage {
 	
 	WebDriverWait myWait_lx;
-	
 	
 	@FindBy(css="span.id-sign-in-top-nav.initially-off > a")
 	WebElement SignInbyCSS;
@@ -31,7 +31,7 @@ public class LandingPage extends AbstractPage {
 	WebElement SignInbyPartialLinkText;	
 	
 	@FindBy(id="email")
-	WebElement UserNamebyID;
+	WebElement userNamebyID;
 	
 	@FindBy(id="password")
 	WebElement passwordbyID;
@@ -40,13 +40,13 @@ public class LandingPage extends AbstractPage {
 	@FindBy(xpath=".//*[@id='sign-in']/fieldset/div[4]/input")
 	WebElement SignInByXpath;
 	
-	@FindBy(xpath=".//*[@id='header']/div[1]/div[1]/div[4]/div")
-	WebElement LoggedInUsrByXpath;
+//	@FindBy(xpath=".//*[@id='header']/div[1]/div[1]/div[4]/div")
+//	WebElement LoggedInUsrByXpath;
 	
 	@FindBy(xpath=".//*[@id='header']/div[1]/div[1]/div[4]/div/ul/li[5]/a")
 	WebElement SignOutByXpath;
 	
-	@FindBy(xpath=".//*[@id='header']/div[1]/div[1]/div[4]/div/h2")
+	@FindBy(xpath=".//*[@id='header']/div[1]/div[1]/div[4]/div")
 	WebElement LoggedInUserByXpath;
 
 	
@@ -75,14 +75,16 @@ public class LandingPage extends AbstractPage {
 	
 	public void EnterUsername(String uname) throws InterruptedException{
 		myWait_lx = new WebDriverWait(driver, 45);
-		myWait_lx.until(ExpectedConditions.elementToBeClickable(UserNamebyID));
-		UserNamebyID.sendKeys(uname);
+		myWait_lx.until(ExpectedConditions.elementToBeClickable(userNamebyID));
+		userNamebyID.clear();
+		userNamebyID.sendKeys(uname);
 		
 	}
 
 	public void EnterPassword(String password){
 		myWait_lx = new WebDriverWait(driver, 45);
 		myWait_lx.until(ExpectedConditions.elementToBeClickable(passwordbyID));
+		passwordbyID.clear();
 		passwordbyID.sendKeys(password);
 	}
 	
@@ -90,39 +92,8 @@ public class LandingPage extends AbstractPage {
 		myUtil.takeScreenSnapShot(driver, "BeforeLogin");
 		SignInByXpath.click();	
 	}
-	
-//	public int SuccessfulChk(){
-////		if((driver.findElement(By.cssSelector("body")).getText().contains(myUtil.LOGIN_FAILURE_TEXT))||driver.getTitle().contains(myUtil.SIGN_IN_SCREEN_TITLE)){
-////			System.out.println("\nLogin UnSuccessful");
-////
-////			return 1;
-////			
-////		}
-//
-//		
-//		
-//		Actions action= new Actions(driver);
-//		action.moveToElement(LoggedInUsrByXpath).perform();
-//		
-//		action.moveToElement(SignOutByXpath);
-//			
-//		if(SignOutByXpath.isDisplayed()){
-//			System.out.println("\nLogin Successful");
-//			//Assert.assertTrue("\n Login Successful", 1==1);
-//			return 2;
-//					
-//				
-//			
-//		}
-//		else
-//		{
-//			System.out.println("\n**Some issue occured. Login not successful nor Unsuccessful.");
-//			return 3;
-//		}
-//			
-//	}
-	
 
+	
 
 public String LoginSuccessCheck(String expectedUserName) throws IOException{
 	
@@ -130,7 +101,7 @@ public String LoginSuccessCheck(String expectedUserName) throws IOException{
 	myUtil.takeFieldSnapshot(driver, LoggedInUserByXpath, "Logged-in-user-"+LoggedInUserByXpath.getText());
 	
 	if(LoggedInUserByXpath.getText().contains(expectedUserName)){
-		System.out.println("\n**Login successful with user name= "+LoggedInUserByXpath.getText());
+		System.out.println("\n**Valid User Flow: Login successful with user name= "+LoggedInUserByXpath.getText());
 		return LoggedInUserByXpath.getText();
 	}	
 	else
@@ -142,16 +113,35 @@ public String LoginSuccessCheck(String expectedUserName) throws IOException{
 }
 
 
-public void InvaliLoginCheck() throws IOException{
-	if((driver.findElement(By.cssSelector("body")).getText().contains(myUtil.LOGIN_FAILURE_TEXT))||driver.getTitle().contains(myUtil.SIGN_IN_SCREEN_TITLE)){
-		System.out.println("\n***As expected: System has provided following validation message:"+myUtil.LOGIN_FAILURE_TEXT);
-		myUtil.takeFieldSnapshot(driver, driver.findElement(By.xpath(".//*[@id='sign-in']/fieldset/p")), "Invalid-Login-message");
+public boolean ValidLoginCheck(String expectedUserName) throws IOException{
+	
+	myUtil.takeScreenSnapShot(driver, "AfterLogin");
+	myUtil.takeFieldSnapshot(driver, LoggedInUserByXpath, "Logged-in-user-"+LoggedInUserByXpath.getText());
+	
+	if(LoggedInUserByXpath.getText().contains(expectedUserName)){
+		System.out.println("\n**Valid User Flow: Login successful with user name= "+LoggedInUserByXpath.getText());
+		return true;
+	}	
+	else
+	{
+		System.out.println("\n**Login not Unsuccessful.");
+		return false;
 	}
+		
+}
+
+public boolean InvaliLoginCheck() throws IOException{
+	if((driver.findElement(By.cssSelector("body")).getText().contains(myUtil.LOGIN_FAILURE_TEXT))||driver.getTitle().contains(myUtil.SIGN_IN_SCREEN_TITLE)){
+		System.out.println("\n***As expected: System has provided following validation message: '"+myUtil.LOGIN_FAILURE_TEXT+"'.");
+		myUtil.takeFieldSnapshot(driver, driver.findElement(By.xpath(".//*[@id='sign-in']/fieldset/p")), "Invalid-Login-message");
+		return true;
+	}
+	return false;
 }
 
 public void LogOutAction() throws IOException{
 		Actions action= new Actions(driver);
-		action.moveToElement(LoggedInUsrByXpath).perform();
+		action.moveToElement(LoggedInUserByXpath).perform();
 		
 		myUtil.takeScreenSnapShot(driver, "DuringLogout-");
 		
@@ -160,28 +150,41 @@ public void LogOutAction() throws IOException{
 
 }
 
-//Single checker for Cucumber driven
-//public String VerifyLogin(String expectedUserName) throws IOException{
-//	
-//	myUtil.takeScreenSnapShot(driver, "AfterLogin");
-//	//myUtil.takeFieldSnapshot(driver, LoggedInUserByXpath, "Logged-in-user-"+LoggedInUserByXpath.getText());
-//	
-//	try{
-//		if(LoggedInUserByXpath.getText().contains(expectedUserName)){
-//			System.out.println("\n**Login successful with user name= "+LoggedInUserByXpath.getText());
-//			return LoggedInUserByXpath.getText();
-//		}	
-//		else
-//		{
-//			System.out.println("\n**Some issue occured. Login not Unsuccessful.");
-//			return "Error: Login not Successful";
-//		}
-//	}	
-//	catch(Exception e){
-//		System.out.println("Exception message= "+e.getMessage());
-//	}
-//		
-//}
+
+
+//Alternate Option: Single checker for Cucumber driven
+public String VerifyLogin(String expectedUserName) throws IOException{
+	
+	myUtil.takeScreenSnapShot(driver, "AfterLogin");
+	//myUtil.takeFieldSnapshot(driver, LoggedInUserByXpath, "Logged-in-user-"+LoggedInUserByXpath.getText());
+	String result="";
+	
+	if(LoggedInUserByXpath.isDisplayed()){
+		try{
+			if(LoggedInUserByXpath.getText().contains(expectedUserName)){
+				System.out.println("\n**Valid User flow: Login successful with user name= "+LoggedInUserByXpath.getText());
+				result= LoggedInUserByXpath.getText();
+			}	
+			else
+			{
+				System.out.println("\n**Some issue occured. Login not Unsuccessful.");
+				result= "Error: Login not Successful";
+			}
+		}	
+		catch(Exception e){
+			System.out.println("Exception message= "+e.getMessage());
+		}
+	}
+	else{
+		if((driver.findElement(By.cssSelector("body")).getText().contains(myUtil.LOGIN_FAILURE_TEXT))||driver.getTitle().contains(myUtil.SIGN_IN_SCREEN_TITLE)){
+			System.out.println("\n***Invalid user flow:As expected: System has provided following validation message:"+myUtil.LOGIN_FAILURE_TEXT);
+			myUtil.takeFieldSnapshot(driver, driver.findElement(By.xpath(".//*[@id='sign-in']/fieldset/p")), "Invalid-Login-message");
+		}
+	}
+	
+	return result;
+		
+}
 
 }
 	

@@ -49,12 +49,16 @@ import static org.monte.media.FormatKeys.KeyFrameIntervalKey;
 import static org.monte.media.FormatKeys.MIME_QUICKTIME;
 import static org.monte.media.FormatKeys.MediaTypeKey;
 import static org.monte.media.FormatKeys.MimeTypeKey;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertThat;
 
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 import com.guardian.PageObjects.LandingPage;
 import com.guardian.utilities.XMLDataReader;
 import com.guardian.utilities.myUtil;
+
 
 
 public class PreBDDTests {
@@ -69,8 +73,6 @@ public class PreBDDTests {
 
 	@org.junit.Before
 	public void SetUp() throws IOException, AWTException{
-
-//		driver.manage().deleteAllCookies();
 	
 		GraphicsConfiguration gc = GraphicsEnvironment
 				.getLocalGraphicsEnvironment().getDefaultScreenDevice()
@@ -82,12 +84,10 @@ public class PreBDDTests {
 				KeyFrameIntervalKey, (int) (15 * 60)),
 				new Format(MediaTypeKey,MediaType.VIDEO/*MediaType.<span class="searchterm5">VIDEO</span>*/, EncodingKey, "black", FrameRateKey,Rational.valueOf(30)),
 				null);
-
-		
 		
 			xmlDataReader=new XMLDataReader();
 			
-			switch (myUtil.browserName) {
+		switch (myUtil.browserName) {
 			case "FireFox":
 				driver = new FirefoxDriver();
 				
@@ -99,16 +99,13 @@ public class PreBDDTests {
 				break;	
 				
 			case "Chrome":
-				
-				
-				System.setProperty("webdriver.chrome.driver", System.getProperty("user.home")+"/Documents/Selenium/ChromeDriver/ChromeDriver");
+	
+				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/ChromeDriver");
 				driver=new ChromeDriver();
-				
 				break;
 				
 			default :
 				driver = new FirefoxDriver();
-				
 				break;
 		}
 			driver.get(myUtil.BASE_URL);
@@ -128,14 +125,12 @@ public class PreBDDTests {
 		String password=xmlDataReader.searchElement("validUser", "password");
 		String expectedUserName=xmlDataReader.searchElement("validUser", "username");
 		
+//		JavascriptExecutor jsx1 = (JavascriptExecutor) driver;
+//		jsx1.executeScript("alert('*****Alert: Video recording's on in the Backgroud; Please check Movies folder on Mac & Video folder on Windows***********')");		
+//		Thread.sleep(2000);
+//		driver.switchTo().alert().accept();		
 		screenRecorder.start();
-		Thread.sleep(4000);
-		JavascriptExecutor jsx = (JavascriptExecutor) driver;
-		//jsx.executeScript("document.write(Date());");
-		jsx.executeScript("alert('*****HIIIIIII***********')");
-		
-		Thread.sleep(4000);
-		driver.switchTo().alert().accept();
+		Thread.sleep(1000);
 		landingPage.OpenLoginInterface();
 
 		
@@ -159,60 +154,49 @@ public class PreBDDTests {
 		String password=xmlDataReader.searchElement("invalidUser", "password");
 		String expectedUserName=xmlDataReader.searchElement("invalidUser", "username");
 		
-		screenRecorder.start();
-		
-		JavascriptExecutor jsx = (JavascriptExecutor) driver;
-		//jsx.executeScript("document.write(Date());");
-		jsx.executeScript("alert('*****HIIIIIII***********')");
-		
-		Thread.sleep(4000);
-		driver.switchTo().alert().accept();
-		
+		driver.manage().timeouts().implicitlyWait(myUtil.WAIT_TIME, TimeUnit.SECONDS);
+		JavascriptExecutor jsx2 = (JavascriptExecutor) driver;
+		screenRecorder.start();			
 		landingPage.OpenLoginInterface();
 		landingPage.EnterUsername(uname);
 		landingPage.EnterPassword(password);
 		landingPage.Submit();
 		landingPage.InvaliLoginCheck();
-	
+
 		screenRecorder.stop();
 		
 		
 
 	}
 	
-//	@org.junit.Test
-//	public void ValidInvalidLoginCheck() throws Exception{
-//		
-//		
-//		landingPage = new LandingPage(driver);
-//		String uname=xmlDataReader.searchElement("invalidUser", "email");
-//		String password=xmlDataReader.searchElement("invalidUser", "password");
-//		String expectedUserName=xmlDataReader.searchElement("invalidUser", "username");
-//		
-//		screenRecorder.start();
-//		landingPage.OpenLoginInterface();
-//		landingPage.EnterUsername(uname);
-//		landingPage.EnterPassword(password);
-//		landingPage.Submit();
-//		assertEquals("\n**Checking returned Node", expectedUserName, landingPage.VerifyLogin(uname));
-//		
-//		driver.manage().deleteAllCookies();
-//		
-//		driver.navigate().refresh();
-//	
-//		screenRecorder.stop();
-//		
-//		
-//
-//	}
+	@org.junit.Test
+	public void ValidInvalidLoginCheck() throws Exception{
+		
+		
+		landingPage = new LandingPage(driver);
+		String uname=xmlDataReader.searchElement("invalidUser", "email");
+		String password=xmlDataReader.searchElement("invalidUser", "password");
+		String expectedUserName=xmlDataReader.searchElement("invalidUser", "username");
+		
+		screenRecorder.start();
+		landingPage.OpenLoginInterface();
+		landingPage.EnterUsername(uname);
+		landingPage.EnterPassword(password);
+		landingPage.Submit();
+		driver.manage().deleteAllCookies();
+		screenRecorder.stop();
+
+		
+		
+
+	}
 
 	@After
 	public void finish() throws IOException {
 		
 		driver.close();
 		driver.quit();
-		
-		
+	
 	
 	}
 	

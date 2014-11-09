@@ -3,3 +3,128 @@
 <skipped message="No features found"/>
 </testcase>
 </testsuite>
+ure message="org.openqa.selenium.NoSuchElementException: Timed out after 100 seconds. Unable to locate the element&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '2.43.1', revision: '5163bceef1bc36d43f3dc0b83c88998168a363a0', time: '2014-09-10 09:43:55'&#10;System info: host: 'Laxmis-MacBook-Pro.local', ip: '192.168.0.11', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_67'&#10;Driver info: driver.version: unknown&#10;&#9;at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:72)&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)&#10;&#9;at com.sun.proxy.$Proxy15.getCoordinates(Unknown Source)&#10;&#9;at org.openqa.selenium.interactions.internal.MouseAction.getActionLocation(MouseAction.java:40)&#10;&#9;at org.openqa.selenium.interactions.MoveMouseAction.perform(MoveMouseAction.java:35)&#10;&#9;at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:31)&#10;&#9;at org.openqa.selenium.interactions.Actions.perform(Actions.java:367)&#10;&#9;at com.guardian.PageObjects.LandingPage.LogOutAction(LandingPage.java:144)&#10;&#9;at com.guardian.Runner.HomePageTests.closure(HomePageTests.java:152)&#10;&#9;at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#10;&#9;at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)&#10;&#9;at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#10;&#9;at java.lang.reflect.Method.invoke(Method.java:606)&#10;&#9;at cucumber.runtime.Utils$1.call(Utils.java:35)&#10;&#9;at cucumber.runtime.Timeout.timeout(Timeout.java:12)&#10;&#9;at cucumber.runtime.Utils.invoke(Utils.java:31)&#10;&#9;at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:59)&#10;&#9;at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:213)&#10;&#9;at cucumber.runtime.Runtime.runHooks(Runtime.java:201)&#10;&#9;at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:195)&#10;&#9;at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:42)&#10;&#9;at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:83)&#10;&#9;at org.junit.runners.Suite.runChild(Suite.java:127)&#10;&#9;at org.junit.runners.Suite.runChild(Suite.java:26)&#10;&#9;at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#10;&#9;at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#10;&#9;at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#10;&#9;at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#10;&#9;at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#10;&#9;at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#10;&#9;at org.junit.runners.Suite.runChild(Suite.java:127)&#10;&#9;at org.junit.runners.Suite.runChild(Suite.java:26)&#10;&#9;at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#10;&#9;at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#10;&#9;at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#10;&#9;at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#10;&#9;at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#10;&#9;at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#10;&#9;at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)&#10;&#9;at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)&#10;&#9;at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#10;&#9;at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#10;&#9;at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#10;&#9;at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#10;&#9;at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#10;&#9;at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#10;&#9;at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)&#10;&#9;at cucumber.api.junit.Cucumber.runChild(Cucumber.java:82)&#10;&#9;at cucumber.api.junit.Cucumber.runChild(Cucumber.java:41)&#10;&#9;at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)&#10;&#9;at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)&#10;&#9;at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)&#10;&#9;at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)&#10;&#9;at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)&#10;&#9;at org.junit.runners.ParentRunner.run(ParentRunner.java:309)&#10;&#9;at cucumber.api.junit.Cucumber.run(Cucumber.java:87)&#10;&#9;at com.guardian.Reporting.MyReporter.run(MyReporter.java:67)&#10;&#9;at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#10;&#9;at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#10;&#9;at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#10;&#9;at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#10;&#9;at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#10;&#9;at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#10;Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id='header']/div[1]/div[1]/div[4]/div/h2&quot;}&#10;Command duration or timeout: 20.21 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '2.43.1', revision: '5163bceef1bc36d43f3dc0b83c88998168a363a0', time: '2014-09-10 09:43:55'&#10;System info: host: 'Laxmis-MacBook-Pro.local', ip: '192.168.0.11', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_67'&#10;Session ID: 51b3a6c2-51b9-7146-8ac0-4bee12cba3c1&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities [{platform=MAC, databaseEnabled=true, cssSelectorsEnabled=true, javascriptEnabled=true, acceptSslCerts=true, handlesAlerts=true, browserName=firefox, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=31.0}]&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:526)&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)&#10;&#9;at org.openqa.selenium.By$ByXPath.findElement(By.java:357)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)&#10;&#9;at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)&#10;&#9;at org.openqa.selenium.support.pagefactory.AjaxElementLocator.access$001(AjaxElementLocator.java:40)&#10;&#9;at org.openqa.selenium.support.pagefactory.AjaxElementLocator$SlowLoadingElement.isLoaded(AjaxElementLocator.java:140)&#10;&#9;at org.openqa.selenium.support.ui.SlowLoadableComponent.get(SlowLoadableComponent.java:69)&#10;&#9;at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:70)&#10;&#9;... 62 more&#10;Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id='header']/div[1]/div[1]/div[4]/div/h2&quot;}&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '2.43.1', revision: '5163bceef1bc36d43f3dc0b83c88998168a363a0', time: '2014-09-10 09:43:55'&#10;System info: host: 'Laxmis-MacBook-Pro.local', ip: '192.168.0.11', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_67'&#10;Driver info: driver.version: unknown&#10;&#9;at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///var/folders/2q/cw765yps0dzbxx3gkqs9f4xc0000gn/T/anonymous6864122578652398786webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9618:133)&#10;&#9;at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///var/folders/2q/cw765yps0dzbxx3gkqs9f4xc0000gn/T/anonymous6864122578652398786webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)&#10;"><![CDATA[Given the user accesses the login page of the Guardian website..............passed
+When the user enters value IncorrectUsername in username field..............passed
+When the user enters value InvalidPassword in password field................passed
+And Signs himself or herself in.............................................passed
+Then the unsuccessful should be shown.......................................passed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: Timed out after 100 seconds. Unable to locate the element
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.43.1', revision: '5163bceef1bc36d43f3dc0b83c88998168a363a0', time: '2014-09-10 09:43:55'
+System info: host: 'Laxmis-MacBook-Pro.local', ip: '192.168.0.11', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_67'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:72)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)
+	at com.sun.proxy.$Proxy15.getCoordinates(Unknown Source)
+	at org.openqa.selenium.interactions.internal.MouseAction.getActionLocation(MouseAction.java:40)
+	at org.openqa.selenium.interactions.MoveMouseAction.perform(MoveMouseAction.java:35)
+	at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:31)
+	at org.openqa.selenium.interactions.Actions.perform(Actions.java:367)
+	at com.guardian.PageObjects.LandingPage.LogOutAction(LandingPage.java:144)
+	at com.guardian.Runner.HomePageTests.closure(HomePageTests.java:152)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at cucumber.runtime.Utils$1.call(Utils.java:35)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:12)
+	at cucumber.runtime.Utils.invoke(Utils.java:31)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:59)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:213)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:201)
+	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:195)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:42)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:83)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:82)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:41)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:87)
+	at com.guardian.Reporting.MyReporter.run(MyReporter.java:67)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":".//*[@id='header']/div[1]/div[1]/div[4]/div/h2"}
+Command duration or timeout: 20.21 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.43.1', revision: '5163bceef1bc36d43f3dc0b83c88998168a363a0', time: '2014-09-10 09:43:55'
+System info: host: 'Laxmis-MacBook-Pro.local', ip: '192.168.0.11', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_67'
+Session ID: 51b3a6c2-51b9-7146-8ac0-4bee12cba3c1
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=MAC, databaseEnabled=true, cssSelectorsEnabled=true, javascriptEnabled=true, acceptSslCerts=true, handlesAlerts=true, browserName=firefox, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=31.0}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.access$001(AjaxElementLocator.java:40)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator$SlowLoadingElement.isLoaded(AjaxElementLocator.java:140)
+	at org.openqa.selenium.support.ui.SlowLoadableComponent.get(SlowLoadableComponent.java:69)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:70)
+	... 62 more
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":".//*[@id='header']/div[1]/div[1]/div[4]/div/h2"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.43.1', revision: '5163bceef1bc36d43f3dc0b83c88998168a363a0', time: '2014-09-10 09:43:55'
+System info: host: 'Laxmis-MacBook-Pro.local', ip: '192.168.0.11', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_67'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///var/folders/2q/cw765yps0dzbxx3gkqs9f4xc0000gn/T/anonymous6864122578652398786webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9618:133)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///var/folders/2q/cw765yps0dzbxx3gkqs9f4xc0000gn/T/anonymous6864122578652398786webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
+]]></failure>
+</testcase>
+<testcase classname="Login to Guardian website" name="TheLogin" time="40.151973">
+<failure message="java.lang.NullPointerException&#10;&#9;at java.lang.String.contains(String.java:2076)&#10;&#9;at com.guardian.PageObjects.LandingPage.ValidLoginCheck(LandingPage.java:121)&#10;&#9;at com.guardian.Runner.HomePageTests.the_successful_should_be_shown(HomePageTests.java:145)&#10;&#9;at ✽.Then the successful should be shown(src/test/resources/LoginSpecs.feature:10)&#10;"><![CDATA[Given the user accesses the login page of the Guardian website..............passed
+When the user enters value CorrectUsername in username field................passed
+When the user enters value CorrectPassword in password field................passed
+And Signs himself or herself in.............................................passed
+Then the successful should be shown.........................................failed
+
+StackTrace:
+java.lang.NullPointerException
+	at java.lang.String.contains(String.java:2076)
+	at com.guardian.PageObjects.LandingPage.ValidLoginCheck(LandingPage.java:121)
+	at com.guardian.Runner.HomePageTests.the_successful_should_be_shown(HomePageTests.java:145)
+	at ✽.Then the successful should be shown(src/test/resources/LoginSpecs.feature:10)
+]]></failure>
+</testcase>
+</testsuite>

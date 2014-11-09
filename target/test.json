@@ -2,7 +2,7 @@
     "id": "login-to-guardian-website",
     "tags": [
       {
-        "name": "@runG",
+        "name": "@runZ",
         "line": 1
       }
     ],
@@ -10,6 +10,246 @@
     "name": "Login to Guardian website",
     "keyword": "Feature",
     "line": 3,
-    "uri": "src/test/java/com/best4cust/Runner/features/Login.feature"
+    "elements": [
+      {
+        "after": [
+          {
+            "result": {
+              "duration": 150045582000,
+              "status": "failed",
+              "error_message": "org.openqa.selenium.NoSuchElementException: Timed out after 100 seconds. Unable to locate the element\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00272.43.1\u0027, revision: \u00275163bceef1bc36d43f3dc0b83c88998168a363a0\u0027, time: \u00272014-09-10 09:43:55\u0027\nSystem info: host: \u0027Laxmis-MacBook-Pro.local\u0027, ip: \u0027192.168.0.11\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.9.4\u0027, java.version: \u00271.7.0_67\u0027\nDriver info: driver.version: unknown\n\tat org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:72)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)\n\tat com.sun.proxy.$Proxy15.getCoordinates(Unknown Source)\n\tat org.openqa.selenium.interactions.internal.MouseAction.getActionLocation(MouseAction.java:40)\n\tat org.openqa.selenium.interactions.MoveMouseAction.perform(MoveMouseAction.java:35)\n\tat org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:31)\n\tat org.openqa.selenium.interactions.Actions.perform(Actions.java:367)\n\tat com.guardian.PageObjects.LandingPage.LogOutAction(LandingPage.java:144)\n\tat com.guardian.Runner.HomePageTests.closure(HomePageTests.java:152)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:606)\n\tat cucumber.runtime.Utils$1.call(Utils.java:35)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:12)\n\tat cucumber.runtime.Utils.invoke(Utils.java:31)\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:59)\n\tat cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:213)\n\tat cucumber.runtime.Runtime.runHooks(Runtime.java:201)\n\tat cucumber.runtime.Runtime.runAfterHooks(Runtime.java:195)\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:42)\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:83)\n\tat org.junit.runners.Suite.runChild(Suite.java:127)\n\tat org.junit.runners.Suite.runChild(Suite.java:26)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\n\tat org.junit.runners.Suite.runChild(Suite.java:127)\n\tat org.junit.runners.Suite.runChild(Suite.java:26)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:82)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:41)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:87)\n\tat com.guardian.Reporting.MyReporter.run(MyReporter.java:67)\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)\nCaused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {\"method\":\"xpath\",\"selector\":\".//*[@id\u003d\u0027header\u0027]/div[1]/div[1]/div[4]/div/h2\"}\nCommand duration or timeout: 20.21 seconds\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00272.43.1\u0027, revision: \u00275163bceef1bc36d43f3dc0b83c88998168a363a0\u0027, time: \u00272014-09-10 09:43:55\u0027\nSystem info: host: \u0027Laxmis-MacBook-Pro.local\u0027, ip: \u0027192.168.0.11\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.9.4\u0027, java.version: \u00271.7.0_67\u0027\nSession ID: 51b3a6c2-51b9-7146-8ac0-4bee12cba3c1\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities [{platform\u003dMAC, databaseEnabled\u003dtrue, cssSelectorsEnabled\u003dtrue, javascriptEnabled\u003dtrue, acceptSslCerts\u003dtrue, handlesAlerts\u003dtrue, browserName\u003dfirefox, webStorageEnabled\u003dtrue, nativeEvents\u003dfalse, rotatable\u003dfalse, locationContextEnabled\u003dtrue, applicationCacheEnabled\u003dtrue, takesScreenshot\u003dtrue, version\u003d31.0}]\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:526)\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:357)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)\n\tat org.openqa.selenium.support.pagefactory.AjaxElementLocator.access$001(AjaxElementLocator.java:40)\n\tat org.openqa.selenium.support.pagefactory.AjaxElementLocator$SlowLoadingElement.isLoaded(AjaxElementLocator.java:140)\n\tat org.openqa.selenium.support.ui.SlowLoadableComponent.get(SlowLoadableComponent.java:69)\n\tat org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:70)\n\t... 62 more\nCaused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {\"method\":\"xpath\",\"selector\":\".//*[@id\u003d\u0027header\u0027]/div[1]/div[1]/div[4]/div/h2\"}\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00272.43.1\u0027, revision: \u00275163bceef1bc36d43f3dc0b83c88998168a363a0\u0027, time: \u00272014-09-10 09:43:55\u0027\nSystem info: host: \u0027Laxmis-MacBook-Pro.local\u0027, ip: \u0027192.168.0.11\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.9.4\u0027, java.version: \u00271.7.0_67\u0027\nDriver info: driver.version: unknown\n\tat \u003canonymous class\u003e.FirefoxDriver.prototype.findElementInternal_(file:///var/folders/2q/cw765yps0dzbxx3gkqs9f4xc0000gn/T/anonymous6864122578652398786webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9618:133)\n\tat \u003canonymous class\u003e.fxdriver.Timer.prototype.setTimeout/\u003c.notify(file:///var/folders/2q/cw765yps0dzbxx3gkqs9f4xc0000gn/T/anonymous6864122578652398786webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)\n"
+            },
+            "match": {
+              "location": "HomePageTests.closure()"
+            }
+          }
+        ],
+        "id": "login-to-guardian-website;thelogin;;2",
+        "tags": [
+          {
+            "name": "@runZ",
+            "line": 1
+          }
+        ],
+        "before": [
+          {
+            "result": {
+              "duration": 6678123000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomePageTests.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 6327915000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomePageTests.setUp()"
+            }
+          }
+        ],
+        "description": "",
+        "name": "TheLogin",
+        "keyword": "Scenario Outline",
+        "line": 14,
+        "steps": [
+          {
+            "result": {
+              "duration": 6973156000,
+              "status": "passed"
+            },
+            "name": "the user accesses the login page of the Guardian website",
+            "keyword": "Given ",
+            "line": 6,
+            "match": {
+              "location": "HomePageTests.the_user_accesses_the_login_page_of_Guardian_website()"
+            }
+          },
+          {
+            "result": {
+              "duration": 105148000,
+              "status": "passed"
+            },
+            "name": "the user enters value IncorrectUsername in username field",
+            "keyword": "When ",
+            "line": 7,
+            "match": {
+              "arguments": [
+                {
+                  "val": "IncorrectUsername",
+                  "offset": 22
+                }
+              ],
+              "location": "HomePageTests.the_user_enters_value_in_username_field(String)"
+            },
+            "matchedColumns": [
+              0
+            ]
+          },
+          {
+            "result": {
+              "duration": 188624000,
+              "status": "passed"
+            },
+            "name": "the user enters value InvalidPassword in password field",
+            "keyword": "When ",
+            "line": 8,
+            "match": {
+              "arguments": [
+                {
+                  "val": "InvalidPassword",
+                  "offset": 22
+                }
+              ],
+              "location": "HomePageTests.the_user_enters_value_in_password_field(String)"
+            },
+            "matchedColumns": [
+              1
+            ]
+          },
+          {
+            "result": {
+              "duration": 6058211000,
+              "status": "passed"
+            },
+            "name": "Signs himself or herself in",
+            "keyword": "And ",
+            "line": 9,
+            "match": {
+              "location": "HomePageTests.clicks_enter()"
+            }
+          },
+          {
+            "result": {
+              "duration": 343296000,
+              "status": "passed"
+            },
+            "name": "the unsuccessful should be shown",
+            "keyword": "Then ",
+            "line": 10,
+            "match": {
+              "location": "HomePageTests.the_unsuccessful_should_be_shown()"
+            },
+            "matchedColumns": [
+              2
+            ]
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "after": [
+          {
+            "result": {
+              "duration": 7800915000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomePageTests.closure()"
+            }
+          }
+        ],
+        "id": "login-to-guardian-website;thelogin;;3",
+        "tags": [
+          {
+            "name": "@runZ",
+            "line": 1
+          }
+        ],
+        "description": "",
+        "name": "TheLogin",
+        "keyword": "Scenario Outline",
+        "line": 15,
+        "steps": [
+          {
+            "result": {
+              "duration": 6976910000,
+              "status": "passed"
+            },
+            "name": "the user accesses the login page of the Guardian website",
+            "keyword": "Given ",
+            "line": 6,
+            "match": {
+              "location": "HomePageTests.the_user_accesses_the_login_page_of_Guardian_website()"
+            }
+          },
+          {
+            "result": {
+              "duration": 104677000,
+              "status": "passed"
+            },
+            "name": "the user enters value CorrectUsername in username field",
+            "keyword": "When ",
+            "line": 7,
+            "match": {
+              "arguments": [
+                {
+                  "val": "CorrectUsername",
+                  "offset": 22
+                }
+              ],
+              "location": "HomePageTests.the_user_enters_value_in_username_field(String)"
+            },
+            "matchedColumns": [
+              0
+            ]
+          },
+          {
+            "result": {
+              "duration": 69210000,
+              "status": "passed"
+            },
+            "name": "the user enters value CorrectPassword in password field",
+            "keyword": "When ",
+            "line": 8,
+            "match": {
+              "arguments": [
+                {
+                  "val": "CorrectPassword",
+                  "offset": 22
+                }
+              ],
+              "location": "HomePageTests.the_user_enters_value_in_password_field(String)"
+            },
+            "matchedColumns": [
+              1
+            ]
+          },
+          {
+            "result": {
+              "duration": 7929364000,
+              "status": "passed"
+            },
+            "name": "Signs himself or herself in",
+            "keyword": "And ",
+            "line": 9,
+            "match": {
+              "location": "HomePageTests.clicks_enter()"
+            }
+          },
+          {
+            "result": {
+              "duration": 10942982000,
+              "status": "failed",
+              "error_message": "java.lang.NullPointerException\n\tat java.lang.String.contains(String.java:2076)\n\tat com.guardian.PageObjects.LandingPage.ValidLoginCheck(LandingPage.java:121)\n\tat com.guardian.Runner.HomePageTests.the_successful_should_be_shown(HomePageTests.java:145)\n\tat ✽.Then the successful should be shown(src/test/resources/LoginSpecs.feature:10)\n"
+            },
+            "name": "the successful should be shown",
+            "keyword": "Then ",
+            "line": 10,
+            "match": {
+              "location": "HomePageTests.the_successful_should_be_shown()"
+            },
+            "matchedColumns": [
+              2
+            ]
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "uri": "src/test/resources/LoginSpecs.feature"
   }
 ]

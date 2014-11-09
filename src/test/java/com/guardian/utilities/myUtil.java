@@ -42,7 +42,6 @@ public class myUtil {
     
     
     //public static final String browserName ="Chrome";
-    //public static final String browserName ="Headless";
     public static final String browserName ="FireFox";
 
 	
